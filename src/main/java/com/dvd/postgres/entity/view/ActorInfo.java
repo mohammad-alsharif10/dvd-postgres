@@ -1,7 +1,8 @@
-package com.dvd.postgres.entity;
+package com.dvd.postgres.entity.view;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,6 +17,8 @@ import org.hibernate.annotations.Immutable;
 @Immutable
 @Table(name = "actor_info")
 public class ActorInfo {
+
+    @Id
     @Column(name = "actor_id")
     private Integer actorId;
 

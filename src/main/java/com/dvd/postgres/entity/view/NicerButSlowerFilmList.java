@@ -1,7 +1,8 @@
-package com.dvd.postgres.entity;
+package com.dvd.postgres.entity.view;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,8 @@ import java.math.BigDecimal;
 @Immutable
 @Table(name = "nicer_but_slower_film_list")
 public class NicerButSlowerFilmList {
+
+    @Id
     @Column(name = "fid")
     private Integer fid;
 

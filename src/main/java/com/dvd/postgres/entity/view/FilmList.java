@@ -1,10 +1,12 @@
-package com.dvd.postgres.entity;
+package com.dvd.postgres.entity.view;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.Remove;
 import org.hibernate.annotations.Immutable;
 
 import java.math.BigDecimal;
@@ -18,6 +20,8 @@ import java.math.BigDecimal;
 @Immutable
 @Table(name = "film_list")
 public class FilmList {
+
+    @Id
     @Column(name = "fid")
     private Integer fid;
 
@@ -39,10 +43,6 @@ public class FilmList {
     @Column(name = "actors", length = Integer.MAX_VALUE)
     private String actors;
 
-/*
- TODO [Reverse Engineering] create field to map the 'rating' column
- Available actions: Define target Java type | Uncomment as is | Remove column mapping
     @Column(name = "rating", columnDefinition = "mpaa_rating")
     private Object rating;
-*/
 }
